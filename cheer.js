@@ -1,6 +1,6 @@
 const userName = {
-    first: "JOHN",
-    last: "DOE"
+    first: "USER",
+    last: "NAME"
 }
 
 const { first } = userName;
@@ -9,7 +9,8 @@ const { last } = userName;
 const vowelSoundSet = new Set(["O", "H"]);
 const consonantSoundSet = new Set(["J", "D"]);
 
-vowelSoundSet.add("N").add("E");
+consonantSoundSet.add("B").add("C").add("G").add("K").add("P").add("Q").add("T").add("U").add("V").add("W").add("Y").add("Z");
+vowelSoundSet.add("N").add("E").add("A").add("F").add("H").add("I").add("L").add("M").add("N").add("R").add("S").add("X");
 
 let fullNameArr = [...first, ...last];
 

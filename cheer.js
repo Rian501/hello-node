@@ -1,17 +1,11 @@
-let name = "JOHN DOE";
-
-
-
-//use the following:
-// Object literal shorthand
-// Destructuring assignments
-
 const userName = {
     first: "JOHN",
     last: "DOE"
 }
+
 const { first } = userName;
 const { last } = userName;
+
 const vowelSoundSet = new Set(["O", "H"]);
 const consonantSoundSet = new Set(["J", "D"]);
 

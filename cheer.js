@@ -1,7 +1,10 @@
+#!/usr/bin/env node
+
+
 const userName = {
-    first: "USER",
-    last: "NAME"
-}
+    first: "your",
+    last: "face"
+};
 
 const { first } = userName;
 const { last } = userName;
@@ -13,26 +16,43 @@ consonantSoundSet.add("B").add("C").add("G").add("K").add("P").add("Q").add("T")
 vowelSoundSet.add("N").add("E").add("A").add("F").add("H").add("I").add("L").add("M").add("N").add("R").add("S").add("X");
 
 let fullNameArr = [...first, ...last];
+let upperFirst = first.toUpperCase();
+let upperLast = last.toUpperCase();
+let fullNameString = `${upperFirst} ${upperLast}`;
 
 let cheerVowel = (letter) => {
     console.log(`Give me an ${letter}!`);
 }
 
 let cheerConson = (letter) => {
-    console.log(`Give me a ${letter}!`);
+    console.log(`Give me a  ${letter}!`);
 }
 
-let makeCheer = (nameArray) => {
+const makeCheer = (nameArray) => {
    for (let i=0; i < nameArray.length; i++) {
-     if (vowelSoundSet.has(nameArray[i])) {
-         cheerVowel(nameArray[i]);
-     } else if (consonantSoundSet.has(nameArray[i])) {
-        cheerConson(nameArray[i]);
+     if (vowelSoundSet.has(nameArray[i].toUpperCase())) {
+         cheerVowel(nameArray[i].toUpperCase());
+     } else if (consonantSoundSet.has(nameArray[i].toUpperCase())) {
+        cheerConson(nameArray[i].toUpperCase());
      }
    }
    console.log("What does that spell?")
-   console.log(`${first} ${last}!`)
+   console.log(`${fullNameString}!`)
 }
 
 makeCheer(fullNameArr);
 
+
+
+// let i = nameArr.length;
+// let j = 0;
+// function printLetters(i) {
+//     setTimeout( () => {
+//         if (-i) {
+//             let letter = nameArr[j];
+//             j++
+//         }
+//     }, 1000);
+
+
+// }
